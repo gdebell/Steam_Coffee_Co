@@ -6,7 +6,6 @@
     .service('StockService', StockService);
 
   function StockService() {
-    console.log('should log 2nd');
     this.productsArray = [
         {
           id: 5,
