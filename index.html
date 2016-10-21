@@ -29,11 +29,11 @@
           <div class="col s1">
           </div>
 
-          <div class="col s3">
+          <div class="col s3" ng-controller="CategoriesController as ctgy">
           </br>
-            <select class="browser-default">
+            <select class="browser-default" ng-model="selected">
               <option value="" disabled selected>Select By Category </option>
-              <option value="1">ADD CATEGORIES HERE</option>
+              <option ng-repeat="item in ctgy.categoriesArray" value=""> {{ item }}</option>
             </select>
           </div></br>
 
