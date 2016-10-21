@@ -70,14 +70,14 @@
 
               <div class="col s4">
                 <div>
-                  <img class="drinkPic" src="{{item.imageUrl}}" height="200" width="200">
+                  <img class="drinkPic" ng-src="{{item.imageUrl}}" height="200" width="200">
                 </div>
               </div>
 
               <div class="col s8">
-                <h5> {{ item.name }} {{item.inStock}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ item.price | currency}}</h5>
-                <p ng-if=" '{{item.inStock}}' === 'true' "> In Stock?: Yes </p>
-                <!-- <p ng-if=" '{{item.inStock}}' === true "> In Stock?: Yes </p> -->
+                <h5> {{ item.name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ item.price | currency}}</h5>
+                <div><p ng-if=" item.inStock  "> In Stock?: Yes </p></div>
+                <p ng-if=" !item.inStock "> In Stock?: No </p>
 
                 <p> Rating: {{ item.rating }} </p>
                 <p> Caffeine: {{ item.caffeineScale}} mg</p>
