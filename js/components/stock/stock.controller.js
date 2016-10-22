@@ -9,22 +9,27 @@
 
   function StockController (StockService) {
     /*jshint validthis: true */
-    this.name = 'yo';
     this.productsArray = StockService.productsArray;
   }
+
+
 
   function CategoriesController (StockService) {
     var itemList = StockService.productsArray;
     let categoryList = [];
 
-    itemList.forEach(function(item){
-        for (var i= 0; i < item.categories.length; i++) {
+    itemList.forEach(function(item) {
+        for (var i = 0; i < item.categories.length; i++) {
           if (categoryList.indexOf(item.categories[i]) === -1) {
-            categoryList.push(item.categories[i])
+            categoryList.push(item.categories[i]);
           }
         }
-    });
+      });
     this.categoriesArray = categoryList;
-  }
 
+    this.getItem = function (data) {
+      console.log('you clicked the select button!');
+      console.log(data);
+    };
+  }
 })();
