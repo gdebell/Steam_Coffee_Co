@@ -9,3 +9,23 @@
   margin-left: -10px;
   padding-right: 10px;
 }
+
+input::-webkit-input-placeholder {
+color: #653f1f !important;
+font-weight: bold !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: #653f1f !important;
+font-weight: bold !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #653f1f !important;
+font-weight: bold !important;
+}
+
+input:-ms-input-placeholder {
+color: #653f1f !important;
+font-weight: bold !important;
+}
