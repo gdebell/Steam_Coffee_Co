@@ -10,9 +10,6 @@
   function StockController (StockService) {
     /*jshint validthis: true */
     this.productsArray = StockService.productsArray;
-    this.addToOrder = function (order) {
-      console.log(order);
-    };
   }
 
   function CategoriesController (StockService) {

@@ -13,7 +13,11 @@
       })
       .when('/checkout', {
         templateUrl: 'js/components/checkout/checkout.view.html',
-        controller: 'CheckoutController'
+        controller: 'CartController',
+        controllerAs: 'cartCtgy'
+      })
+      .when('/about', {
+        templateUrl: 'js/components/info/about.view.html'
       })
       .otherwise('/');
 

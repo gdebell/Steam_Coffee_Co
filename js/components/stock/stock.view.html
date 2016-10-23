@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-
   <!-- step 4 add a div tag with ng-view -->
   <body ng-cloak class="card-panel brown lighten-4">
     <!-- sample angular code -->
     <div class="col s12" ng-controller="StockController as stockCtrl">
         <div class="row col s12"><div class="col s1"></div>
-          <div class="col s3 input-field" ng-controller="CategoriesController as ctgy">
+          <div class="col s3 input-field" >
             <select class="browser-default"  ng-model="data" ng-options="item for item in ctgy.categoriesArray" ng-selected="ctgy.getItem(data)"> {{item}} </select>
           </div>
           <div class="col s1"></div>
@@ -34,7 +33,7 @@
         <div class="row">
         <form class="col s12" name="orderForm">
           <div class="col s1"></div>
-            <div class="row col s10">
+            <div class="row col s10" ng-controller="CartController as cartCtrl" >
               <div ng-repeat="item in stockCtrl.productsArray | filter: $rootScope.searchBar | orderBy: selected | orderBy: name">
                 <div class="card small z-depth-3">
                   <div class="row col s12">
@@ -73,7 +72,7 @@
                       </select>
                     </div>
                     <div class="col s4">
-                      <button type="submit" ng-click="stockCtrl.addToOrder({coffee: item, quantity: data})"><a class="waves-effect waves-light btn  brown lighten-3"><i class="material-icons  right">local_drink</i>Add To Order</a></button>
+                      <button type="submit" ng-click="cartCtrl.addToOrder({coffee: item, quantity: data})"><a class="waves-effect waves-light btn  brown lighten-3"><i class="material-icons  right">local_drink</i>Add To Order</a></button>
                     </div>
                   </div>
                 </div>
@@ -83,6 +82,7 @@
         </form>
         </div>
       </div>
+    </div>
     <!-- scripts -->
   </body>
 </html>

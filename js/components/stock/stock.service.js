@@ -3,7 +3,16 @@
 
   angular
     .module('CartApp.service.stock', [])
-    .service('StockService', StockService);
+    .service('StockService', StockService)
+    .service('CartService', CartService);
+
+  function CartService () {
+    let shoppingCartArray = '';
+
+    this.fillCart = (info) => {
+      console.log('in cart serv', info);
+    };
+  }
 
   function StockService() {
     this.productsArray = [

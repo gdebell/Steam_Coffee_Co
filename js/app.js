@@ -11,7 +11,6 @@
       'CartApp.service.stock',
       'CartApp.controller.stock',
       'CartApp.config.stock',
-      'CartApp.config.checkout',
       'CartApp.components.checkout'
     ]);
 
