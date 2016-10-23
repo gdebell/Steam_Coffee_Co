@@ -3,9 +3,19 @@
   'use strict';
 
   angular
-    .module('CartApp.config', [])
-    .config(appConfig);
+    .module('CartApp.config', ['ngRoute'])
+    .config(function($routeProvider) {
+      $routeProvider
+      .when('/', {
+        templateUrl: 'js/components/stock/stock.view.html',
+        controller: 'CategoriesController',
+        controllerAs: 'ctgy'
+      })
+      .when('/checkout', {
+        templateUrl: 'js/components/checkout/checkout.view.html',
+        controller: 'CheckoutController'
+      })
+      .otherwise('/');
 
-  function appConfig() {}
-
+    });
 })();
