@@ -7,10 +7,31 @@
     .service('CartService', CartService);
 
   function CartService () {
-    let shoppingCartArray = '';
+    let shoppingCartArray = [];
+    let array;
 
     this.fillCart = (info) => {
-      console.log('in cart serv', info);
+      //console.log('in cart serv', info);
+      //console.log(info.coffee.id);
+
+      if (info.quantity === undefined) {
+        info.quantity = 1;
+      }
+      shoppingCartArray.push({
+        cartId: info.coffee.id,
+        cartName: info.coffee.name,
+        cartIngredients: info.coffee.ingredients,
+        cartCaffeineScale: info.coffee.caffeineScale,
+        cartPrice: info.coffee.price,
+        cartInStock: info.coffee.inStock,
+        cartRating: info.coffee.rating,
+        cartiImageUrl: info.coffee.imageUrl,
+        cartCategories: info.coffee.categories,
+        cartQuantity: info.quantity,
+        cartSubtotal: (info.quantity * info.coffee.price)
+      });
+      //console.log('ORDER', shoppingCartArray);
+      return shoppingCartArray;
     };
   }
 

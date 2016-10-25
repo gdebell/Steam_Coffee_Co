@@ -8,12 +8,12 @@
   CartController.$inject = ['CartService'];
 
   function CartController (CartService) {
-    let shoppingBag = [];
 
     this.addToOrder = function (order) {
       //console.log('In contoroller', order);
-      shoppingBag.push(order);
-      CartService.fillCart(shoppingBag);
+      this.userCart = CartService.fillCart(order);
+      console.log('Access to data in controller', this.userCart);
+      console.log(this.userCart[0].cartName);
     };
   }
 

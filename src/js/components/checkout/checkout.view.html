@@ -14,11 +14,11 @@
     <div class="row col s1">
     </div>
 
-    <div clas="row col s10">
+    <div clas="row col s10" ng-repeat="product in cartCtgy.userCart">
       <table class="striped">
       <tbody>
         <tr>
-          <td>{{cartCtgy[0].object}}</td>
+          <td>{{product}}</td>
           <td>Coffee Info</td>
           <td>QTY and Subtotal</td>
           <td>Edit and Remove Btns</td>
