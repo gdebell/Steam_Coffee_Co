@@ -5,16 +5,11 @@
     .module('CartApp.components.checkout', [])
     .controller('CartController', CartController);
 
-  CartController.$inject = ['CartService'];
+  CartController.$inject = ['$scope', 'CartService'];
 
-  function CartController (CartService) {
-
-    this.addToOrder = function (order) {
-      //console.log('In contoroller', order);
-      this.userCart = CartService.fillCart(order);
-      console.log('Access to data in controller', this.userCart);
-      console.log(this.userCart[0].cartName);
+  function CartController ($scope, CartService) {
+      this.order =  CartService.returnCart();
+      console.log(this.order);
     };
-  }
 
 })();

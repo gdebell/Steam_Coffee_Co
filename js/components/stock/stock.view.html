@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="CartApp">
-  <head>
-    <meta charset="utf-8">
-    <title>Untitled</title>
-    <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <!-- step 4 add a div tag with ng-view -->
   <body ng-cloak class="card-panel brown lighten-4">
     <!-- sample angular code -->
     <div class="col s12" ng-controller="StockController as stockCtrl">
@@ -33,7 +21,7 @@
         <div class="row">
         <form class="col s12" name="orderForm">
           <div class="col s1"></div>
-            <div class="row col s10" ng-controller="CartController as cartCtrl" >
+            <div class="row col s10">
               <div ng-repeat="item in stockCtrl.productsArray | filter: $rootScope.searchBar | orderBy: selected | orderBy: name">
                 <div class="card small z-depth-3">
                   <div class="row col s12">
@@ -72,7 +60,7 @@
                       </select>
                     </div>
                     <div class="col s4">
-                      <button type="submit" ng-click="cartCtrl.addToOrder({coffee: item, quantity: data})"><a class="waves-effect waves-light btn  brown lighten-3"><i class="material-icons  right">local_drink</i>Add To Order</a></button>
+                      <button type="submit" ng-click="ctgy.addToOrder({coffee: item, quantity: data})"><a class="waves-effect waves-light btn  brown lighten-3"><i class="material-icons  right">local_drink</i>Add To Order</a></button>
                     </div>
                   </div>
                 </div>
@@ -85,4 +73,3 @@
     </div>
     <!-- scripts -->
   </body>
-</html>

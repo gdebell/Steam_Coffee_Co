@@ -11,12 +11,10 @@
     let array;
 
     this.fillCart = (info) => {
-      //console.log('in cart serv', info);
-      //console.log(info.coffee.id);
-
       if (info.quantity === undefined) {
         info.quantity = 1;
       }
+
       shoppingCartArray.push({
         cartId: info.coffee.id,
         cartName: info.coffee.name,
@@ -25,12 +23,16 @@
         cartPrice: info.coffee.price,
         cartInStock: info.coffee.inStock,
         cartRating: info.coffee.rating,
-        cartiImageUrl: info.coffee.imageUrl,
+        cartImageUrl: info.coffee.imageUrl,
         cartCategories: info.coffee.categories,
         cartQuantity: info.quantity,
         cartSubtotal: (info.quantity * info.coffee.price)
       });
-      //console.log('ORDER', shoppingCartArray);
+      console.log('log # 2 ORDER', shoppingCartArray);
+      return shoppingCartArray;
+    };
+
+    this.returnCart = function () {
       return shoppingCartArray;
     };
   }
