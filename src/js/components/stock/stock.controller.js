@@ -5,14 +5,14 @@
     .controller('StockController', StockController)
     .controller('CategoriesController', CategoriesController);
 
-  StockController.$inject = ['StockService'];
+  StockController.$inject = ['StockService', 'CartService'];
 
   function StockController (StockService) {
     /*jshint validthis: true */
     this.productsArray = StockService.productsArray;
   }
 
-  function CategoriesController (StockService) {
+  function CategoriesController (StockService, CartService) {
     var itemList = StockService.productsArray;
     let categoryList = [];
     let matchName = [];
@@ -38,5 +38,12 @@
         //console.log(matchName);
         this.matchArray = matchName;
       };
+
+    this.addToOrder = function (order) {
+      console.log('In stock contoroller log #1 ', order);
+      this.userCart = CartService.fillCart(order);
+    }
   }
+
+
 })();
