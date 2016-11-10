@@ -35,7 +35,6 @@
             }
           });
         });
-        console.log(matchName);
         this.matchArray = matchName;
       };
 

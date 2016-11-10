@@ -6,19 +6,19 @@
     .module('CartApp.config', ['ngRoute'])
     .config(function($routeProvider) {
       $routeProvider
-      .when('/#/', {
+      .when('/', {
         templateUrl: 'js/components/stock/stock.view.html',
         controller: 'CategoriesController',
         controllerAs: 'ctgy'
       })
-      .when('/#/checkout', {
+      .when('/checkout', {
         templateUrl: 'js/components/checkout/checkout.view.html',
         controller: 'CartController',
         controllerAs: 'cartCtgy'
       })
-      .when('/#/about', {
+      .when('/about', {
         templateUrl: 'js/components/info/about.view.html'
       })
-      .otherwise('/#/');
+      .otherwise('/');
     });
 })();
