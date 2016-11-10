@@ -35,15 +35,13 @@
             }
           });
         });
-        //console.log(matchName);
+        console.log(matchName);
         this.matchArray = matchName;
       };
 
     this.addToOrder = function (order) {
-      console.log('In stock contoroller log #1 ', order);
       this.userCart = CartService.fillCart(order);
-    }
+    };
   }
-
 
 })();
