@@ -2,7 +2,7 @@
 
 ## What is Steam Coffee Co?
 
-### Steam Coffee Co is a website for a coffee bussiness.  The website allows a user to filter beverages by typing in the name of the drink or by price point.
+### Steam Coffee Co is a website for a coffee business.  The website allows a user to filter beverages by typing in the name of the drink or by price point.
 ### After a user selects their order, an order summary is populated in the shopping cart on the next page.
 
 
