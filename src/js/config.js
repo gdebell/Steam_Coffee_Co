@@ -20,6 +20,5 @@
         templateUrl: 'js/components/info/about.view.html'
       })
       .otherwise('/');
-
     });
 })();
