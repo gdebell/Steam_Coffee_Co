@@ -13,7 +13,7 @@
 ### For this assignment I learned about Angular.  This is only my second application built using Angular.  
 ### To understand Angular, I became familiar with directives, services, and controllers.    
 ### I learned that using $rootScope should be avoided.  (The first application I build using Angular, Galvanize showed use $rootscope to pass data.)
-### I also became familary with Materialize to style my site. 
+### I also became familiar with Materialize to style my site. 
 
 
 
